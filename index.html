@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 p-6 text-white">
+        <h1 class="text-3xl font-bold text-center">Tienda de Productos</h1>
+        <div class="flex justify-center mt-4">
+            <input type="text" id="search-bar" class="w-1/2 p-2 rounded-lg shadow-md text-black" placeholder="Buscar productos...">
+        </div>
+    </header>
+    <section id="filters" class="bg-white p-4 shadow-lg mt-4 mx-4 rounded-lg flex flex-col md:flex-row justify-between items-center">
+        <h2 class="text-xl font-semibold mb-4 md:mb-0">Filtros</h2>
+        <div class="flex flex-wrap gap-4">
+            <select id="category-filter" class="border rounded-lg p-2">
+                <option value="">Todas las Categorías</option>
+            </select>
+            <select id="availability-filter" class="border rounded-lg p-2">
+                <option value="">Disponibilidad</option>
+                <option value="available">Disponibles</option>
+                <option value="soldout">Agotados</option>
+                <option value="bestseller">Más Vendidos</option>
+            </select>
+            <select id="price-filter" class="border rounded-lg p-2">
+                <option value="">Precio</option>
+                <option value="lt10000">Menor a $10,000</option>
+                <option value="gt30000">Mayor a $30,000</option>
+            </select>
+            <select id="sort-filter" class="border rounded-lg p-2">
+                <option value="">Ordenar por</option>
+                <option value="name">Nombre</option>
+                <option value="price-asc">Menor Precio</option>
+                <option value="price-desc">Mayor Precio</option>
+            </select>
+        </div>
+    </section>
+    <section id="product-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+    </section>
+    <section id="cart" class="fixed bottom-8 right-8">
+        <button id="open-cart-btn" class="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+            Ver Carrito
+        </button>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
